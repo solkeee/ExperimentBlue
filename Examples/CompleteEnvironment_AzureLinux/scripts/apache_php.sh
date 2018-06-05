@@ -13,5 +13,5 @@ sudo a2enmod php7.1
 sudo service apache2 restart
 #echo "Setting ownership on /var/www"
 sudo chown -R www-data:www-data /var/www 
-wget  -O /var/www/html/demo.php 
+wget https://github.com/solkeee/ExperimentBlue/blob/master/Examples/CompleteEnvironment_AzureLinux/scripts/demo.php -O /var/www/html/demo.php 
 sudo chown -R www-data:www-data /var/www/html/demo.php
