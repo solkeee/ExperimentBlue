@@ -41,3 +41,4 @@ echo "get the demo.php from github"
 wget https://raw.githubusercontent.com/solkeee/ExperimentBlue/master/Examples/CompleteEnvironment_AzureLinux/scripts/demo.php -O /var/www/html/demo.php 
 echo "change file to read only : demo.php"
 sudo chown -R www-data:www-data /var/www/html/demo.php
+echo "changed file to read only : demo.php"
