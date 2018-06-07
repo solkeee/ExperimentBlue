@@ -23,7 +23,7 @@ sudo add-apt-repository ppa:ondrej/php -y && sudo apt-get -y update
 wait
 echo "Added Php repo ppa ondrej/php..."
 echo "Install Php and modules ..."
-sudo apt install -y php7.1 libapache2-mod-php7.1 php7.1-mysql php-common php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-readline\
+sudo apt install -y php7.1 libapache2-mod-php7.1 php7.1-mysql php-common php7.1-cli php7.1-common php7.1-json php7.1-opcache php7.1-readline
 wait
 echo "Installation of Php and modules complete..."
 echo "Updating apache2 to use php7.1 ..."
