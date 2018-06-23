@@ -5,7 +5,7 @@ sudo apt-get -y update && sudo apt-get -y upgrade
 wait
 echo "Completed distro update and upgrade..."
 echo "Running apache2 install..."
-sudo apt-get -y install apache2
+sudo apt-get -y install apache2 apache2-mpm-prefork apache2.2-common libapache2-mod-php5* 
 wait
 echo "Completed apache2 install..."
 echo "Getting public IP ..."
