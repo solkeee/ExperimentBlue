@@ -28,5 +28,9 @@ expect eof
 ")
 
 echo "$SECURE_MYSQL"
-mysql -u root -p root -e "CREATE DATABASE test;"
+sudo su
+sudo mysql -uroot -e "CREATE DATABASE test;"
+sudo mysql -e "CREATE USER 'demouser'@'localhost' IDENTIFIED BY 'demopwd';"
+sudo mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'demouser'@'localhost';"
+sudo mysql -e "FLUSH PRIVILEGES;"
 apt-get purge -y expect
