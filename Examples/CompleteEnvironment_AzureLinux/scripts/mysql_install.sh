@@ -30,7 +30,7 @@ expect eof
 echo "$SECURE_MYSQL"
 sudo su
 sudo mysql -uroot -e "CREATE DATABASE test;"
-sudo mysql -e "CREATE USER 'demouser'@'localhost' IDENTIFIED BY 'demopwd';"
-sudo mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'demouser'@'localhost';"
-sudo mysql -e "FLUSH PRIVILEGES;"
+#sudo mysql -e "CREATE USER 'demouser'@'localhost' IDENTIFIED BY 'demopwd';"
+sudo mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost';"
+#sudo mysql -e "FLUSH PRIVILEGES;"
 apt-get purge -y expect
