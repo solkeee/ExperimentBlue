@@ -2,8 +2,8 @@
    if( $_POST["name"]  ) {
    	$name = $_POST["name"];
    	$servername = "192.168.2.5";
-	$username = "demouser";
-	$password = "demopwd";
+	$username = "root";
+	$password = "root";
 	$dbname = "test";
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	if (!$conn) {
