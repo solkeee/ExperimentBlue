@@ -35,18 +35,14 @@ echo "Updated mysql bind address in /etc/mysql/mysql.conf.d/mysqld.cnf to 0.0.0.
 echo "Creating Db test ..."
 sudo mysql -uroot -e "CREATE DATABASE test;"
 echo "Creation of Db test complete."
-
+echo "Create Table data in test db"
+sudo mysql -uroot -e "USE test;CREATE TABLE data(name VARCHAR(50));"
 echo "Assigning mysql user dbcon access on %."
-sudo mysql -u dbcon -pdbconpwd2018 --execute "GRANT ALL PRIVILEGES ON *.* TO 'dbcon'@'%' IDENTIFIED BY 'dbconpwd2018' with GRANT OPTION; FLUSH PRIVILEGES;" test
+sudo mysql -uroot -e "CREATE USER dbcon@% IDENTIFIED BY 'dbconpwd2018';"
+sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON test.* BY 'dbconpwd2018';"
 echo "Assigned mysql user dbcon access on all hosts."
 
 sudo service mysql stop
 sudo service mysql start
 
-
-#sudo su
-#sudo mysql -uroot -e "CREATE DATABASE test;"
-#sudo mysql -e "CREATE USER 'demouser'@'localhost' IDENTIFIED BY 'demopwd';"
-#sudo mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'root'@'%';"
-#sudo mysql -e "FLUSH PRIVILEGES;"
 apt-get purge -y expect
