@@ -26,7 +26,7 @@ expect \"Reload privilege tables now?\"
 send \"y\r\"
 expect eof
 ")
-sudo su
+#sudo su
 echo "$SECURE_MYSQL"
 echo "Updating mysql configs in /etc/mysql/mysql.conf.d/mysqld.cnf."
 sudo sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
