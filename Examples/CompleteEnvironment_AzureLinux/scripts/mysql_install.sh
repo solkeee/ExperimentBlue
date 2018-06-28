@@ -32,6 +32,8 @@ echo "Updating mysql configs in /etc/mysql/mysql.conf.d/mysqld.cnf."
 sudo sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
 echo "Updated mysql bind address in /etc/mysql/mysql.conf.d/mysqld.cnf to 0.0.0.0 to allow external connections."
 
+
+
 echo "Creating Db test ..."
 sudo mysql -uroot -e "CREATE DATABASE test;"
 echo "Creation of Db test complete."
@@ -39,7 +41,7 @@ echo "Create Table data in test db"
 sudo mysql -uroot -e "USE test;CREATE TABLE data(name VARCHAR(50));"
 echo "Assigning mysql user dbcon access on %."
 sudo mysql -uroot -e "CREATE USER dbcon@% IDENTIFIED BY 'dbconpwd2018';"
-sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON test.* BY 'dbconpwd2018';"
+sudo mysql -uroot -e "GRANT ALL ON test.* TO dbcon IDENTIFIED BY 'dbconpwd2018';"
 echo "Assigned mysql user dbcon access on all hosts."
 
 sudo service mysql stop
