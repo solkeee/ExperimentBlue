@@ -40,8 +40,8 @@ echo "Creation of Db test complete."
 echo "Create Table data in test db"
 sudo mysql -uroot -e "USE test;CREATE TABLE data(name VARCHAR(50));"
 echo "Assigning mysql user dbcon access on %."
-sudo mysql -uroot -e "CREATE USER dbcon@% IDENTIFIED BY 'dbconpwd2018';"
-sudo mysql -uroot -e "GRANT ALL ON test.* TO dbcon IDENTIFIED BY 'dbconpwd2018';"
+sudo mysql -uroot -e "CREATE USER 'dbcon'@'%' IDENTIFIED BY 'dbconpwd2018';"
+sudo mysql -uroot -e "GRANT ALL ON test.* TO 'dbcon'@'%' ;"
 echo "Assigned mysql user dbcon access on all hosts."
 
 sudo service mysql stop
