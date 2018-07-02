@@ -37,7 +37,7 @@
       <form action = "<?php $_PHP_SELF ?>" method = "POST">
          Name: <input type = "text" name = "name" />
          
-         <input type = "submit" />
+         <input type = "submit" name = "btnSubmit" />
       </form>
    
    </body>
