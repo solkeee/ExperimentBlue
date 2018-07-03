@@ -35,9 +35,9 @@
    <body>
    
       <form action = "<?php $_PHP_SELF ?>" method = "POST">
-         Name: <input type = "text" name = "name" />
+         Name: <input type = "text" name = "name" id="name" />
          
-         <input type = "submit" name = "btnSubmit" />
+         <input type = "submit" name = "btnSubmit" id="btnSubmit" />
       </form>
    
    </body>
